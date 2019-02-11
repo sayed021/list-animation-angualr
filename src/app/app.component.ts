@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { fadeInOutAnimation } from './animations/itemAnimation';
+import { fadeInOutAnimation, TranslateLeftToRIght } from './animations/itemAnimation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations:[fadeInOutAnimation]
+  animations:[fadeInOutAnimation, TranslateLeftToRIght]
 })
 
 export class AppComponent {

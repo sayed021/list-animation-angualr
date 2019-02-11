@@ -39,6 +39,34 @@ trigger('fadeInOutAnimation', [
     ])
 ]);
 
+export const TranslateLeftToRIght =
+
+trigger('TranslateLeftToRIght', [
+    transition('* => *', [ 
+
+        query(':enter', [
+            style({
+                opacity: 0,
+                transform: 'translateX(-100%) scale(1.2)'
+            }),
+            stagger('100ms', [
+                animate('0.5s', style({ opacity: 1 , transform: 'translateX(0) scale(1)'}))
+            ])
+        ], { optional: true }),
+
+        query(':leave', [
+            style({
+                opacity:1,
+                transform: 'translateX(0)'
+            }),
+            stagger('100ms', [
+                animate('0.5s', style({ opacity: 0, transform: 'translateX(100%) scale(1.5)' }))
+            ])
+        ], { optional: true })
+        
+    ])
+]);
+
 
 
 export const ListAnimation =
@@ -59,20 +87,19 @@ export const ListAnimation =
             animate('1s ease-in', keyframes([
                 style({ 
                     opacity: 1, 
-                    position:'fixed', right: '100px' , bottom: '0', width: '500px',
+                    transform: 'translateY(0) scale(1)',
                     offset: 0
                 }),
                 style({
-                    opacity: 1,
-                    position:'fixed', right: '100px' , bottom: '10px', width: '500px',
-                    offset: .2
+                    opacity: 0.5,
+                    transform: 'translateY(50px)  scale(1.2)',
+                    offset: .01
                 }),
                 style({
-                    opacity: .5,
-                    transform:'translateX(50%)',
-                    offset: .6
-                }),
-                style({opacity:0, transform:'translateX(100%)', offset: 1}),
+                    opacity: .3,
+                    transform: 'translateY(-50px)  scale(1.5)',
+                    offset: 1
+                })
             ]))
            ]), { optional: true })
 

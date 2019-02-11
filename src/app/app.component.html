@@ -14,6 +14,12 @@
                     <app-another-list></app-another-list>
                 </div>
             </div>
+            <div class="col-6">
+                <h1 class="text-center">left fadein animation</h1>
+                <ul [@TranslateLeftToRIght]="items.length">
+                    <li *ngFor="let item of items; let i=index">{{item}} {{i+1}} <span (click)="deleteItem(i)">&#x274C;</span></li>
+                </ul>
+            </div>
         </div>
     </div>
 

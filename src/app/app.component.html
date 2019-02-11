@@ -1,5 +1,5 @@
 <div id="content">
-  <ul>
-    <li *ngFor="let item of items; let i=index">{{item}} {{i+1}}</li>
-  </ul>
+    <ul [@fadeInOutAnimation]="items.length">
+        <li *ngFor="let item of items; let i=index">{{item}} {{i+1}} <span (click)="deleteItem(i)">&#x274C;</span></li>
+    </ul>
 </div>

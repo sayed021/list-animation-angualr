@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { AnotherListComponent } from './another-list/another-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnotherListComponent
   ],
   imports: [
     BrowserModule,

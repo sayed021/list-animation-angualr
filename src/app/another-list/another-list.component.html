@@ -1,0 +1,4 @@
+<button (click)='showToggle()'>show item</button>
+<ul [@ListAnimation]="Listitems.length" *ngIf="showitem" class="text-left mt-2">
+    <li *ngFor="let item of Listitems; let i=index">{{item}} {{i+1}} <span (click)="deleteItem(i)">&#x274C;</span></li>
+</ul>

@@ -1,5 +1,22 @@
 <div id="content">
-    <ul [@fadeInOutAnimation]="items.length">
-        <li *ngFor="let item of items; let i=index">{{item}} {{i+1}} <span (click)="deleteItem(i)">&#x274C;</span></li>
-    </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="text-center">left fadein animation</h1>
+                <ul [@fadeInOutAnimation]="items.length">
+                    <li *ngFor="let item of items; let i=index">{{item}} {{i+1}} <span (click)="deleteItem(i)">&#x274C;</span></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <div class="text-center">
+                    <h2>translate fadein animation</h2>
+                    <app-another-list></app-another-list>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
